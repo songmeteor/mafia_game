@@ -11,7 +11,7 @@ static const char* role_names[] = {
     "Doctor"
 };
 
-const char* role_to_string(role_t r) {
+const char* role_to_string(role_t r) {                        // 역할 문자열을 클라이언트에 broadcast할때 사용.
     if (r < 0 || r >= sizeof(role_names)/sizeof(*role_names))
         return "Unknown";
     return role_names[r];
